@@ -1,0 +1,199 @@
+:root {
+  --primary: #ffff;
+  --seconadry: #04bf8a;
+  --danger: #f26210;
+  --ui: #253259;
+  --header1: 3rem;
+  --header2: 2rem;
+  --text: #555;
+  --header3: 1.5rem;
+  --radius: 9px;
+  --header4: 0.5rem;
+}
+body {
+  background: var(--primary);
+  color: #555;
+  overflow-x: hidden;
+}
+img {
+  width: 100%;
+}
+.active-nav {
+  color: var(--seconadry);
+}
+.db {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  background: #f2f2f2;
+}
+.db .app-sidebar {
+  width: 20%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 30px 10px;
+  background-color: #f2f2f2 !important;
+}
+.db .app-lists {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.db .app-lists li {
+  margin: 15px;
+}
+.db .app-lists a {
+  transition: 0.4s;
+  font-size: 14px;
+}
+.db .app-lists a:hover {
+  color: var(--seconadry);
+  cursor: pointer;
+}
+
+.db .main-bar {
+  background: #ddd;
+  width: 80%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 30px 10px;
+}
+.db .main-bar .appbar {
+  height: 10vh;
+  padding: 10px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.db .main-bar .appbar form {
+  display: flex;
+  padding: 10px;
+  width: 40%;
+}
+.db .main-bar .appbar form input {
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-top-left-radius: 27rem;
+  border-bottom-left-radius: 27rem;
+}
+.db .main-bar .appbar form button {
+  background: var(--ui);
+  height: 50px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-top-right-radius: 27rem;
+  border-bottom-right-radius: 27rem;
+}
+.main-bar .appbar form button:hover {
+  color: var(--ui);
+  background: var(--primary);
+}
+.db .main-bar .appbar .appbar-list {
+  display: flex;
+}
+.db .main-bar .appbar .appbar-list {
+  display: flex;
+  align-items: center;
+}
+.db .main-bar .appbar .appbar-list .avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.jobs-container {
+  width: 100%;
+  padding: 20px auto;
+  padding: 20px;
+}
+.jobs-container .job-header {
+  font-size: 14px;
+  font-weight: lighter;
+  padding-left: 1rem;
+}
+.jobs-container .job-header .color-base {
+  color: var(--seconadry);
+}
+.jobs-container .jobs-card-flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.jobs-container .job-card {
+  display: flex;
+  background: #fff;
+  margin: 1rem;
+  justify-content: space-between;
+  border-radius: 9px;
+  align-items: center;
+  border: 3px solid var(--seconadry);
+  padding: 10px;
+}
+.jobs-container .job-card .job-company-logo {
+  width: 80px;
+}
+.jobs-container .block2 {
+  padding-left: 1rem;
+}
+.jobs-container .job-role {
+  font-size: 15px;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jobs-container address {
+  font-size: 15px;
+  color: var(--ui);
+  font-style: initial;
+  text-transform: capitalize;
+}
+.jobs-container .job-company-name {
+  color: var(--ui);
+  font-weight: 900;
+  display: block;
+}
+.jobs-container .block-3 {
+  width: 40%;
+}
+.jobs-container .block-3 .price {
+  font-size: 20px;
+}
+.jobs-container .block-3 .small-text {
+  font-size: 15px;
+}
+.jobs-container .block-3 .small-text {
+  font-size: 15px;
+}
+.jobs-container .action-btns {
+  margin-top: 2rem;
+}
+.jobs-container .action-btns button {
+}
+.jobs-container .apply-btn {
+  width: 100px;
+  background: #f2f2f2;
+  height: 45px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 9px;
+  text-align: center;
+  color: var(--ui);
+  padding: 10px;
+}
+
+.mobile-only {
+  display: none;
+}

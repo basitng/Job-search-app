@@ -1,0 +1,228 @@
+:root {
+  --primary: #555;
+}
+
+.profile-heading {
+  display: block;
+  font-size: 20px;
+  text-decoration: line-through;
+  margin: 30px 30px;
+}
+.profile-bg {
+  background: #eee;
+}
+.profile-page {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--seconadry);
+}
+.nav-parent {
+  height: 15vh;
+}
+#profile-card {
+  width: 80%;
+  margin: 5rem auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+form {
+  width: 100%;
+}
+.profile-page .block1 {
+  max-width: 30%;
+  font-size: 15px;
+  text-align: center;
+}
+.profile-page .block1 .profile-username {
+  font-weight: 900;
+}
+.profile-page .block1 .notice {
+  font-size: 13px;
+  color: var(--ui);
+  font-weight: lighter;
+}
+.profile-page .block1 .input-field input {
+  display: none;
+}
+.profile-page .block1 .input-field label {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  margin: 10px auto;
+  height: 40px;
+  padding: 10px;
+  border-radius: 9px;
+  color: var(--primary);
+  background-color: var(--ui);
+  cursor: pointer;
+}
+.profile-page .block1 .input-field label svg {
+  fill: var(--primary);
+  width: 20px;
+  height: 20px;
+}
+.profile-page #block2 .input-field button {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  height: 40px;
+  padding: 10px;
+  border-radius: 9px;
+  border: none;
+  color: var(--text);
+  background-color: var(--seconadry) !important;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+  font-weight: 500;
+}
+.profile-page #block2 .input-field button:hover {
+  color: white !important;
+}
+.profile-page #block2 .input-field button svg {
+  fill: #555;
+  width: 20px;
+  height: 20px;
+}
+#profile-card #block2 .input-field {
+  width: 100%;
+  display: flex;
+  /* background: #000; */
+  justify-content: space-between;
+}
+#profile-card .input-field input {
+  /* width: 100%; */
+  height: 50px;
+  margin: 5px;
+  padding: 15px;
+  color: #555;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  background: #eee;
+}
+#profile-card .block1 img {
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 150px;
+}
+
+@media screen and (max-width: 620px) {
+  #profile-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem !important;
+  }
+  #profile-heading {
+    display: none;
+  }
+  #profile-card {
+    width: 90%;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  #profile-page #block1 {
+    max-width: 100% !important;
+  }
+  #profile-card #block2 #input-field {
+    width: 100%;
+    display: flex;
+    /* background: #000; */
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #profile-card #block2 #input-field input {
+    height: 50px;
+    margin: 5px;
+    padding: 15px;
+    color: #555;
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    background: #eee;
+  }
+  #profile-card #block1 img {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 150px;
+  }
+
+  #profile-card #block1 .profile-username {
+    font-weight: 900;
+  }
+  #profile-card #block1 .notice {
+    font-size: 13px;
+    color: var(--ui);
+    font-weight: lighter;
+  }
+  #profile-card #block1 #input-field input {
+    display: none;
+  }
+  #profile-card #block1 #input-field label {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    margin: 10px auto;
+    height: 40px;
+    padding: 10px;
+    border-radius: 9px;
+    color: var(--primary);
+    background-color: var(--ui);
+    cursor: pointer;
+  }
+  #profile-card #block1 #input-field label svg {
+    fill: var(--primary);
+    width: 20px;
+    height: 20px;
+  }
+  #profile-card #block2 #input-field button {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    height: 40px;
+    padding: 10px;
+    border-radius: 9px;
+    border: none;
+    color: var(--text);
+    background-color: var(--seconadry) !important;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+    font-weight: 500;
+  }
+  #profile-card #block2 #input-field button:hover {
+    color: white !important;
+  }
+  #profile-card #block2 #input-field button svg {
+    fill: #555;
+    width: 20px;
+    height: 20px;
+  }
+  #app-logo svg {
+    animation: animate 1s ease-out infinite alternate;
+    fill: #04bf8a;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-4px);
+    }
+  }
+}

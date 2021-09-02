@@ -1,0 +1,215 @@
+/* MOBILE PHONES */
+@media screen and (max-width: 620px) {
+  :root {
+    --primary: #060719;
+    --seconadry: #04bf8a;
+    --danger: #f26210;
+    --bg2: #12131f;
+    --gradient: linear-gradient(to right, #060606, #12131f);
+    --ui: #253259;
+    --header1: 3rem;
+    --header2: 2rem;
+    --text: #555;
+    --header3: 1.5rem;
+    --radius: 9px;
+    --header4: 0.5rem;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .db {
+    display: none;
+  }
+  body {
+    background: var(--primary);
+    overflow-x: hidden;
+  }
+  img {
+    width: 100%;
+  }
+  .app {
+    background: var(--bg2);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    border-bottom: 1px solid #555;
+    align-items: center;
+  }
+  .app-logo h2 {
+    font-size: 18px;
+    color: #fff;
+  }
+  #avatar {
+    border-radius: 50%;
+    width: 50px;
+    object-fit: cover;
+    height: 50px;
+  }
+  .app-container .app-header h4 {
+    padding: 1rem;
+  }
+  .app-container .app-header .color-base {
+    color: var(--seconadry);
+  }
+  .app-container .app-card-flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .app-container .app-card {
+    display: flex;
+    background: var(--bg2);
+    margin: 1rem;
+    justify-content: space-between;
+    border-radius: 9px;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid var(--seconadry);
+    padding: 10px;
+    text-align: center;
+  }
+  .app-container .app-card .app-company-logo {
+    width: 80px;
+  }
+  .app-container .block2 {
+    padding-left: 1rem;
+  }
+  .app-container .app-role {
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .app-container address {
+    font-size: 15px;
+    color: var(--ui);
+    font-style: initial;
+    text-transform: capitalize;
+  }
+  .app-container .app-company-name {
+    color: var(--ui);
+    font-weight: 900;
+    display: block;
+  }
+  .app-container .block-3 {
+    width: 100%;
+  }
+  .app-container .block-3 .price {
+    font-size: 20px;
+  }
+  .app-container .block-3 .small-text {
+    font-size: 15px;
+  }
+  .app-container .block-3 .small-text {
+    font-size: 15px;
+  }
+  .app-container .action-btns {
+    margin-top: 2rem;
+  }
+
+  .app-container .apply-btn {
+    width: 100px;
+    background: #f2f2f2;
+    height: 45px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 9px;
+    text-align: center;
+    color: var(--ui);
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .bottom-nav {
+    width: 100%;
+    padding: 10px;
+    height: 10vh;
+    background: var(--gradient);
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-item {
+    color: #ddd;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-weight: 900;
+  }
+  .nav-item:hover,
+  .active-nav {
+    color: var(--seconadry);
+  }
+  .nav-item svg {
+    fill: #555;
+  }
+  .pending-btn {
+    color: #555 !important;
+    background: var(--seconadry) !important;
+  }
+}
+
+.notification-modal {
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  padding: 10px;
+  bottom: -100%;
+  transition: 0.4s ease-in-out;
+  left: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0%;
+  border: 2px solid var(--seconadry);
+  position: absolute;
+  border-radius: 9px;
+}
+.notification-modal .notification-header {
+  font-size: 25px;
+  color: #555;
+  padding-top: 7rem;
+}
+.notification-card {
+  height: 8vh;
+  display: flex;
+  margin: 10px;
+  border-radius: 9px;
+  padding: 10px;
+  background: var(--bg2);
+  align-items: center;
+  justify-content: space-between;
+}
+.notification-cards .notification-card .block2 svg {
+  fill: rgb(214, 50, 50);
+}
+.notification-cards .notification-card img {
+  width: 28px;
+}
+.notification-cards .close-btn {
+  float: right;
+  margin-top: -2.5rem;
+}
+.notification-cards .close-btn svg {
+  fill: rgb(214, 50, 50);
+}
+.notification-modal-active {
+  visibility: visible !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  opacity: 1 !important;
+}

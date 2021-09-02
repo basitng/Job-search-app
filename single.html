@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobberx</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/singlePage.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script defer src="js/jq.js"></script> -->
+    <script defer src="js/single.js"></script>
+    <script defer src="js/db.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div class="logo-block">
+          <a href="index.html" style="color: #fff"><h2>Jobberx</h2></a>
+        </div>
+        <div id="nav-links">
+          <li><a href="job.html">Dashboard</a></li>
+          <li><a href="saved-jobs.html">My Jobs</a></li>
+          <li><a href="job.html">Jobs</a></li>
+          <li><a href="profile.html">my profile</a></li>
+        </div>
+        <div id="nav-auths">
+          <li><a href="signup.html" class="sign-up btn">Logout</a></li>
+        </div>
+        <div class="nav-menu">
+          <svg
+            id="menu"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="#000000"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mobile-sidebar">
+      <ul>
+        <li><a href="job.html">Dashboard</a></li>
+        <li><a href="saved-jobs.html">My Jobs</a></li>
+        <li><a href="job.html">Jobs</a></li>
+        <li><a href="profile.html">my profile</a></li>
+      </ul>
+    </div>
+
+    <div id="banner">
+      <div id="container">
+        <div id="container-avatar">
+          <center>
+            <img src="icons/svg/002-facebook.svg" />
+          </center>
+        </div>
+        <!--- End Avatar -->
+        <div id="container-content">
+          <center>
+            <h2 id="job-role">Product Manager & Product Analysis Eginner</h2>
+            <span id="company-name"></span>
+            <div id="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                voluptas hic dolores non distinctio! Amet maiores voluptates ab,
+                repudiandae temporibus cum placeat dolores ipsa dolore error,
+                magnam corrupti sit? Repellendus quaerat animi ducimus
+                accusantium? Similique vero modi dolorem dicta, id sequi
+                asperiores? Officiis et sapiente velit fugiat porro similique
+                assumenda.
+              </p>
+            </div>
+          </center>
+        </div>
+        <div id="action-btn">
+          <button id="modal-button">Apply now</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Section -->
+
+    <div id="form" class="form-modal">
+      <center>
+        <div id="content">
+          <h2>Fill IN the Application</h2>
+          <p>
+            This application we check if you really qualified and if you are in
+            the United State. Be at rest your information is secured
+          </p>
+        </div>
+      </center>
+      <form action="" method="post">
+        <div class="input-field">
+          <input required type="text" placeholder="Firstname*" />
+          <input required type="text" placeholder="Lastname*" />
+        </div>
+        <div class="input-field">
+          <input required type="text" placeholder="Specialization*" />
+          <input required type="text" placeholder="Working Experince*" />
+        </div>
+        <div class="input-field">
+          <input required type="text" placeholder="Phone number*" />
+          <input required type="text" placeholder="SSN*" />
+        </div>
+        <div class="input-field">
+          <input required type="text" placeholder="ID number*" />
+          <input required type="text" placeholder="City*" />
+        </div>
+        <div class="input-field">
+          <button type="submit" class="submit-btn">
+            Submit
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+              />
+            </svg>
+          </button>
+          <div class="close" onclick="close()">Close</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

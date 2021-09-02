@@ -1,0 +1,366 @@
+:root {
+  --primary: #f2f2f2;
+  --seconadry: #04bf8a;
+  --danger: #f22233;
+  --ui: #253259;
+  --bg: #222666;
+  --header1: 3rem;
+  --header2: 2rem;
+  --text: #555;
+  --header3: 1.5rem;
+  --radius: 9px;
+  --header4: 0.5rem;
+}
+#nav {
+  width: 100%;
+  padding: 10px;
+  background-color: #161f3a;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  opacity: 1 !important;
+  color: var(--text);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+#nav #menu {
+  display: none;
+  fill: #fff;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-links a {
+  margin: 10px;
+  color: #ddd;
+  transition: 0.4s ease-in;
+}
+
+#nav-auths {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+#nav-auths a {
+  color: #ddd;
+  transition: 0.4s ease-in;
+}
+
+#nav-auths .btn {
+  margin-left: 30px;
+  background: var(--seconadry);
+  cursor: pointer;
+}
+
+#nav-auths,
+#nav-links,
+#nav :hover {
+  color: var(--seconadry);
+}
+.mobile-sidebar {
+  display: none;
+}
+
+/* ================= CONTENT CONTAINER ============== */
+#banner {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(to right, var(--bg), var(--ui));
+  position: relative;
+  top: 0;
+}
+#container {
+  width: 60%;
+  background: #f2f2f2;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  position: absolute;
+  border-radius: 9px;
+}
+#container-avatar {
+  position: relative;
+}
+#container-avatar img {
+  width: 100px;
+  /* position: absolute; */
+  height: 100px;
+  margin-top: -2rem;
+}
+#container-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+#container-content #job-role {
+  color: #161f3a;
+  max-width: 50%;
+}
+#container-content #content {
+  max-width: 80%;
+}
+#container-content #content p {
+  font-size: 15px;
+  padding-top: 1rem;
+  color: #555;
+  line-height: 1.8rem;
+}
+#action-btn button {
+  margin: 10px auto;
+  width: 200px;
+  height: 50px;
+  display: block;
+  border-radius: 9px;
+  border: none;
+  background: var(--seconadry);
+  color: #333;
+}
+
+/* ================= APPLICATION FORM ================ */
+#form {
+  width: 60%;
+  background: #f2f2f2;
+  height: 85%;
+  border-radius: 9px;
+  /* transform: translate(-50%, -50%); */
+  left: 20%;
+  transition: 0.4s;
+  top: -110%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px;
+  z-index: 50;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: 10% !important;
+}
+.close {
+  color: green;
+  padding-top: 6rem;
+  cursor: pointer;
+}
+#form #content {
+  text-align: center;
+  max-width: 55%;
+  padding-bottom: 2rem;
+}
+#form #content h2 {
+  text-transform: uppercase;
+  color: var(--ui);
+}
+#form #content p {
+  color: #555;
+  font-size: 14px;
+}
+#form .input-field button {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  height: 50px;
+  padding: 10px;
+  border-radius: 9px;
+  border: none;
+  color: #fff;
+  background-color: var(--ui) !important;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+  font-weight: 500;
+}
+#form-active {
+  opacity: 1;
+  visibility: visible;
+  top: 55%;
+}
+#form .input-field button:hover {
+  color: white !important;
+  background: var(--seconadry) !important;
+}
+#form .input-field button svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+#form .input-field {
+  width: 100%;
+  display: flex;
+  /* background: #000; */
+  justify-content: center;
+}
+#form .input-field input {
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+  padding: 15px;
+  color: #555;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  background: #eee;
+}
+
+/* ======= MOBILE PHONE VERSION ====== */
+@media screen and (max-width: 620px) {
+  #nav {
+    justify-content: space-between;
+  }
+  #nav #nav-links,
+  #nav #nav-auths {
+    display: none;
+  }
+  #nav #menu {
+    display: block;
+    fill: #fff;
+  }
+
+  .mobile-sidebar {
+    display: block;
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    z-index: 80;
+    transition: 0.4s ease-out;
+    opacity: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background: linear-gradient(90deg, #222666, #253259);
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+    position: fixed;
+  }
+  .mobile-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 10px;
+    justify-content: space-between;
+  }
+  .mobile-sidebar ul .btn {
+    background: #04bf8a;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    margin-top: 15rem;
+  }
+  .mobile-sidebar-active {
+    opacity: 1;
+    width: 70%;
+    visibility: visible;
+  }
+  .mobile-sidebar li {
+    margin: 10px;
+  }
+  .mobile-sidebar a {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+  }
+  .mobile-sidebar a:hover {
+    color: green;
+  }
+
+  /* ================= CONTENT CONTAINER ============== */
+  #banner {
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to right, var(--bg), var(--ui));
+    position: relative;
+    top: 0;
+  }
+  #container {
+    width: 90%;
+    top: 95%;
+  }
+  #container-avatar {
+    position: relative;
+  }
+
+  #container-content #job-role {
+    color: #161f3a;
+    max-width: 80%;
+  }
+  #container-content #content {
+    max-width: 80%;
+  }
+  #container-content #content p {
+    font-size: 16px;
+    padding-top: 1rem;
+    color: #555;
+    line-height: 1.8rem;
+  }
+  #action-btn button {
+    margin: 10px auto;
+    width: 200px;
+    height: 50px;
+    display: block;
+    border-radius: 9px;
+    border: none;
+    background: var(--seconadry);
+    color: #333;
+  }
+  #form {
+    width: 100% !important;
+    position: fixed !important;
+    height: 100vh;
+    overflow-y: scroll;
+    visibility: hidden;
+    opacity: 0;
+    left: 0%;
+    padding-top: 8rem;
+    z-index: 50;
+    top: 0%;
+    bottom: 0;
+  }
+  #form #content {
+    text-align: center;
+    max-width: 75%;
+    padding-bottom: 2rem;
+  }
+  .form-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 0% !important;
+    background: #000;
+  }
+  #form .input-field {
+    width: 100%;
+    display: flex;
+    /* background: #000; */
+    justify-content: center;
+    flex-direction: column;
+  }
+  #form .input-field input {
+    width: 100%;
+    height: 60px;
+  }
+  .close {
+    color: green;
+    padding-top: 0.6rem;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
