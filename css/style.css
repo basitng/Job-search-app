@@ -50,7 +50,9 @@
 .tally__path {
   stroke: currentColor;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   font-size: 16px;
