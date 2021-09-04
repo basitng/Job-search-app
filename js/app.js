@@ -3,12 +3,37 @@ const sidebar = document.querySelector(".mobile-sidebar");
 const nav = document.querySelector("nav");
 const banner = document.querySelector(".banner");
 const preloader = document.querySelector(".preloader");
+const passwordValidator = document.getElementById("password-validator");
+const progress = document.querySelectorAll(".progress");
 
 preloader.classList.add("preloader-active");
 
-window.addEventListener("load", () => {
+window.onload = () => loadPage();
+function loadPage() {
+  console.log("loaded");
   preloader.classList.remove("preloader-active");
-});
+}
+
+function validatePassword() {
+  passwordValidator.onkeyup = (e) => {
+    let password = passwordValidator.value;
+    let searchForNumber = password.match(/\d+/g);
+    if (password.length > 6) {
+      progress[0].classList.add("success");
+    }
+    if (searchForNumber != null) {
+      progress[1].classList.add("success");
+    }
+    if (password.includes("@")) {
+      progress[2].classList.remove("warning");
+      progress[2].classList.add("success");
+    }
+    if (!password.includes("@")) {
+      progress[2].classList.add("warning");
+    }
+  };
+}
+validatePassword();
 
 menu.addEventListener("click", () => {
   sidebar.classList.toggle("mobile-sidebar-active");
