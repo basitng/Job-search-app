@@ -2,17 +2,17 @@ const menu = document.getElementById("menu");
 const sidebar = document.querySelector(".mobile-sidebar");
 const nav = document.querySelector("nav");
 const banner = document.querySelector(".banner");
-const preloader = document.querySelector(".preloader");
+// const preloader = document.querySelector(".preloader");
 const passwordValidator = document.getElementById("password-validator");
 const progress = document.querySelectorAll(".progress");
 
-preloader.classList.add("preloader-active");
+// preloader.classList.add("preloader-active");
 
-window.onload = () => loadPage();
-function loadPage() {
-  console.log("loaded");
-  preloader.classList.remove("preloader-active");
-}
+// window.onload = () => loadPage();
+// function loadPage() {
+//   console.log("loaded");
+//   preloader.classList.remove("preloader-active");
+// }
 
 function validatePassword() {
   passwordValidator.onkeyup = (e) => {
