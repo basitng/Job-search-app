@@ -6,13 +6,22 @@ const banner = document.querySelector(".banner");
 const passwordValidator = document.getElementById("password-validator");
 const progress = document.querySelectorAll(".progress");
 
-// preloader.classList.add("preloader-active");
 
-// window.onload = () => loadPage();
-// function loadPage() {
-//   console.log("loaded");
-//   preloader.classList.remove("preloader-active");
-// }
+menu.addEventListener("click", () => {
+  sidebar.classList.toggle("mobile-sidebar-active");
+});
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
+    }
+  });
+});
+observer.observe(banner);
+
 
 function validatePassword() {
   passwordValidator.onkeyup = (e) => {
@@ -34,18 +43,3 @@ function validatePassword() {
   };
 }
 validatePassword();
-
-menu.addEventListener("click", () => {
-  sidebar.classList.toggle("mobile-sidebar-active");
-});
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      nav.classList.add("nav-scrolled");
-    } else {
-      nav.classList.remove("nav-scrolled");
-    }
-  });
-});
-observer.observe(banner);
