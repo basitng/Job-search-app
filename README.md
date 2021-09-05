@@ -1,1 +1,1 @@
-This product is too be used legally
+This product is to be used legally
